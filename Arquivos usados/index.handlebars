@@ -1,0 +1,59 @@
+        <div class=" w-52 flex mt-40 font-sans ml-10 text-2xl font-bold text-blue-600 italic">
+            <h1>Bem-vindo ao Ticket Now - O Seu Destino para Ingressos Incríveis!</h1>
+        </div>
+        <div class="flex flex-wrap justify-between items-center mx-auto">
+            <div class="py-4 hover:text-blue-700 w-96 flex mt-10 ml-10 font-serif text-base font-light ">
+                <p>Descubra uma vasta seleção de eventos emocionantes, desde concertos empolgantes até espetáculos teatrais cativantes. Com apenas alguns cliques, você estará a caminho de experiências que ficarão gravadas na memória.</p>
+            </div>
+            <div class="ml-52"><img src="./bilhete.png" alt="Bilhete" class="w-52 h-52"></div>
+            <div class="ml-96"><img src="./show.png" alt="show" class="w-52 h-52"></div>
+        </div>
+        </div>
+        <div class="w-52 rounded-none flex justify-center ml-10 shadow-lg  mt-5 rounded bg-blue-700">
+            <a href="./cadastrarevento.html" class="hover:text-blue-300 text-white text-base font-normal ">VENHA FAZER PARTE</a>
+        </div>
+        <div class="bg-blue-700 mt-36 py-8">
+            <div class="flex justify-center items-center mt-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                        </svg>
+                <h2 id="destaque"class="text-white font-bold font-sans text-3xl">Eventos em destaque</h2>
+            </div>
+            <div class="container mx-auto p-8 flex items-center">
+                <div class="bg-gray-300">
+                    <div class="">
+                        <div class="p-8 mr-3 ">
+                            <div class=" col-span-4 grid grid-cols-4">
+                                {{#each eventoDestaque}}
+                                    <div class="col-span-1 p-2">
+                                        <div class="col-span-4 text-center text-lg font-bold uppercase mb-4 mt-6">
+                                            <a href="/paginaEvento/{{dataValues.titulo}}/{{dataValues.eventoID}}">{{dataValues.titulo}}</a>
+                                        </div>
+                                        <div class="w-18 col-span-2">
+                                            <img src="/3_june_6.jpg" alt="image1">
+                                        </div>
+                                        <div class="grid grid-cols-1 col-span-2 "> 
+                                            <span><strong>Organizador:</strong> {{dataValues.empresa}}</span>                                            
+                                            <div class="grid grid-cols-1 h-12">
+                                                <span><strong>Data:</strong></span>
+                                                <span>{{dataValues.data}}</span>            
+                                            </div>
+                                            <div class="grid grid-cols-5 w-36 mt-6">
+                                                <span class="w-32"><strong>{{dataValues.cidade}}-{{dataValues.estado}}</strong></span>
+                                            </div>
+                                        </div>                                        
+                                    </div>                                       
+                                {{/each}}
+                            </div>
+                            <div class="flex justify-center">
+                                <div class="w-60 h-10 rounded flex justify-center items-center shadow-lg bg-white py-5 mt-6 mb-6 animate-bounce ">
+                                    <a href="/Eventos" class="hover:text-black text-black text-base font-bold">VER MAIS</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                                               
+                </div>                
+            </div>           
+        </div>            
+    </div>
+</div>  

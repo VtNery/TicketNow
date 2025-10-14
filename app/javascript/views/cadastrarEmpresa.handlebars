@@ -1,0 +1,87 @@
+<div class="bg-white border rounded-lg px-8 py-6 mx-auto my-8 max-w-2xl">
+    <h2 class="text-blue-500 text-2xl font-medium mb-4 text-center ">Venha ser nosso parceiro</h2>
+    <form method="POST" action="/cadastrarempresa/add">
+        <div class="mb-4">
+            <label for="nomeEmpresa" class="font-bold block text-gray-700  mb-2">1.Nome da Empresa:</label>
+            <input type="text" id="nomeEmpresa" name="nomeEmpresa"
+                class="border border-gray-400 p-2 w-full rounded-lg focus:outline-none focus:border-blue-400" required>
+        </div>
+        <div class="mb-4">
+            <label for="tipoEmpresa" class="font-bold block text-gray-700  mb-2">2.Quais tipos de evento você produz?</label>
+            <select id="tipoEmpresa" name="tipoEmpresa"
+                class="border border-gray-400 p-2 w-full rounded-lg focus:outline-none focus:border-blue-400" required>
+                <option value="1">Festas e shows ao vivo</option>
+                <option value="2">Festas univaersitárias</option>
+                <option value="3">Eventos corporativos</option>
+                <option value="4">Eventos culturais e gastronômicos</option>
+                <option value="5">Festivais</option>
+                <option value="6">Peças teatrais, shows de humor ou cinema</option>
+                <option value="7">Outos tipos de eventos</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label class="font-bold block text-gray-700  mb-2">3.Quantos eventos voce produz no ano?</label>
+            <div class="flex flex-wrap -mx-2">
+                <div class="px-2 w-1/3">
+                    <label for="quantidade1" class="block text-gray-700 font-medium mb-2">
+                        <input type="radio" id="quantidade1" name="quantidadeEventos" value="1" class="mr-2" checked="true">1+
+                    </label>
+                </div>
+                <div class="px-2 w-1/3">
+                    <label for="quantidade3" class="block text-gray-700 font-medium mb-2">
+                        <input type="radio" id="quantidade3" name="quantidadeEventos" value="3" class="mr-2">3+
+                    </label>
+                </div>
+                <div class="px-2 w-1/3">
+                    <label for="quantidade5" class="block text-gray-700 font-medium mb-2">
+                        <input type="radio" id="quantidade5" name="quantidadeEventos" value="5" class="mr-2">5+
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mb-3">
+            <p class="font-bold tracking-tighter text-lg text-gray-900 mb-3">4.Informações para contato</p>
+        <div class="grid md:grid-cols-2 gap-3 mb-3">
+            <div class="flex flex-col w-full">
+                <div class="box-hover shadow-sm outline outline-transparent relative border rounded focus-within:border-blue-500 null">
+                    <input name="emailEmpresa" class="block p-4 w-full text-lg appearance-none focus:outline-none bg-transparent null " placeholder="Email" label="Email"/>
+                </div>
+                <div class="flex text-xs text-red-500"></div>
+            </div>
+            <div class="flex flex-col w-full">
+                <div class="box-hover shadow-sm outline outline-transparent relative border rounded focus-within:border-blue-500 null">
+                    <input name="telefoneEmpresa" class="block p-4 w-full text-lg appearance-none focus:outline-none bg-transparent null " placeholder="Telefone" label="Telefone"/>
+                </div>
+                <div class="flex text-xs text-red-500">
+                </div>
+            </div>
+        </div>
+            <div class="flex flex-col w-full">
+                <div class="box-hover shadow-sm outline outline-transparent relative border rounded focus-within:border-blue-500 null">
+                    <input name="siteEmpresa" class="block p-4 w-full text-lg appearance-none focus:outline-none bg-transparent null " placeholder="Site/Rede social" label="Site/Rede social"/>
+                </div>
+                <div class="flex text-xs text-red-500"></div>
+            </div>
+        </div>
+        <div class="mb-6">
+            <div class="w-full border shadow-sm box-hover rounded p-4 flex items-center space-x-3 cursor-pointer">
+                <label for="">Podemos entrar em contato via Whatsapp?</label>
+                <label for="entrarContatoNao" class="cursor-pointer">Não</label>
+                <input type="radio" name="entrarContato" id="entrarContatoNao" value="0"> <!-- Valor padrão -->
+                <label for="entrarContatoSim" class="cursor-pointer">Sim</label>
+                <input type="radio" name="entrarContato" id="entrarContatoSim" value="1">
+                
+            </div>
+        </div>
+            <div class="mb-6">
+                <p class="font-bold tracking-tighter text-lg text-gray-900 mb-3">Conte mais um pouco sobre você ou envie-nos uma mensagem</p>
+                <textarea name="observacoes" class="border w-full h-48"></textarea>
+            </div>
+            <div class="flex items-end justify-end">
+            <button type="submit" class="w-60 h-10 rounded-full flex justify-center items-center shadow-lg bg-blue-500 text-white py-5 mt-6 mb-6">Enviar formulário</button>
+            </div>
+    </form>
+</div>
+</div>
+<script src="cadastroEmpresa.js"></script>

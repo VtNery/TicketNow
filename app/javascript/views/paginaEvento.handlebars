@@ -1,0 +1,72 @@
+<div class="bg-white border rounded-lg px-8 py-6 mx-auto my-8 max-w-2xl">
+    {{#each evento}}
+    <div class="">
+        <div class="col-span-2 mx-auto my-3">
+            <img src="/3_june_6.jpg" alt="image1" class="h-96 mx-auto rounded-lg">
+        </div>    
+        <h2 class="text-3xl mb-4 font-bold uppercase">{{dataValues.titulo}}</h2>
+
+        <div class=" grid grid-cols-3">
+            <div class="col-span-1 grid grid-cols-1">
+                <span>Data</span>                   
+                <div class="">{{dataValues.data}}</div>
+            </div>
+            <div class="col-span-1 grid grid-cols-1">
+            <span>Cidade</span>
+            <div class="">{{dataValues.cidade}}-{{dataValues.estado}}</div>
+            </div>
+            <div class="col-span-1 grid grid-cols-1 ">
+                <span>Faixa Etária</span>                   
+                <div class="">{{dataValues.classificacaoetaria}} Anos</div>
+            </div>
+            <div class="col-span-3 mt-5 border-2 border-black rounded p-2 ">
+                <span>Descrição</span>
+                <div class="mt-3">{{dataValues.descricao}}</div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    <div class="container mx-auto px-4 py-6 space-y-6 max-w-2xl">
+        {{#each LotesIngresso}}
+        <div class="bg-white border border-gray-300 rounded-lg p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between shadow-sm transition-shadow duration-200 hover:shadow-md">
+            
+            <!-- Nome e preço -->
+            <div class="text-center sm:text-left mb-4 sm:mb-0">
+            <h2 class="text-lg font-semibold text-gray-800">{{dataValues.nome}}</h2>
+            <p class="text-gray-600">
+                R$ <span class="precoIngresso font-medium">{{dataValues.preco}}</span>
+            </p>
+            </div>
+            <!-- Contador -->
+            <div class="flex items-center justify-center gap-3">
+            <button
+                class="subtrairingresso bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-3 rounded text-lg transition-all duration-200 ease-in-out transform hover:scale-105"
+            >-</button>
+            <div
+                class="counter border border-gray-400 px-4 py-2 rounded text-lg text-gray-800 font-medium min-w-[48px] text-center transition duration-200"
+            >0</div>
+            <button
+                class="adicionaringresso bg-green-500 hover:bg-green-600 text-white font-bold py-1 px-3 rounded text-lg transition-all duration-200 ease-in-out transform hover:scale-105"
+            >+</button>
+            </div>
+        </div>
+        {{/each}}
+
+        <!-- Total -->
+        <div class="flex justify-center">
+            <div class="bg-gray-100 border border-gray-300 p-4 rounded-xl shadow w-full max-w-md flex justify-between items-center text-lg font-semibold text-gray-800 transition duration-200">
+            <span>Total:</span>
+            <div class="flex items-baseline gap-1">
+                <span>R$</span>
+                <span class="totalIngresso">0,00</span>
+            </div>
+            </div>
+        </div>
+    </div>
+       <div class="flex items-center justify-center ">
+        <a href="/dadosBancarios" class=" mt-4 flex items-center justify-center w-80 text-2xl font-bold px-6 py-3 leading-none text-gray-200 border border-gray-800 rounded-lg focus:outline-none focus:shadow-outline bg-gradient-to-b hover:from-blue-700 from-gray-900 to-black">  
+        Comprar Ingresso
+        </a>
+    </div>
+</div>
+<script src="/incrementoIngresso.js"></script>

@@ -1,0 +1,42 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node db.js",
+    "dev": "nodemon ./javascript/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcrypto": "^5.4.0",
+    "body-parser": "^1.20.3",
+    "bootstrap": "^5.3.1",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.18.0",
+    "js-cookie": "^3.0.5",
+    "jsonwebtoken": "^9.0.2",
+    "mercadopago": "^1.5.17",
+    "mongoose": "^7.4.5",
+    "mssql": "^10.0.2",
+    "node-localstorage": "^3.0.5",
+    "pg": "^8.11.3",
+    "sequelize": "^6.37.0",
+    "sqlite3": "^5.1.7",
+    "tedious": "^16.6.1"
+  },
+  "devDependencies": {
+    "cookie-parser": "^1.4.6",
+    "handlebars": "^4.7.8",
+    "js-cookie": "^3.0.5",
+    "nodemon": "^3.0.3",
+    "tailwindcss": "^3.4.16"
+  },
+  "description": ""
+}
