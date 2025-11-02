@@ -1,0 +1,154 @@
+<div class="bg-white dark:bg-gray-900 border rounded-2xl shadow-lg px-8 py-10 mx-auto my-12 max-w-3xl">
+  <h2 class="text-blue-600 dark:text-blue-400 text-3xl font-semibold mb-8 text-center">
+    Venha ser nosso parceiro
+  </h2>
+
+  <form method="POST" action="/cadastrarempresa/add" class="space-y-6">
+    
+    <!-- Nome da Empresa -->
+    <div>
+      <label for="nomeEmpresa" class="block text-gray-700 dark:text-gray-200 font-semibold mb-2">
+        1. Nome da Empresa
+      </label>
+      <div class="relative">
+        <input
+          type="text"
+          id="nomeEmpresa"
+          name="nomeEmpresa"
+          placeholder="Ex: Eventos XYZ"
+          required
+          class="w-full border border-gray-300 dark:border-gray-700 rounded-lg p-3 pl-10 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+        <i data-lucide="building-2" class="absolute left-3 top-3.5 w-5 h-5 text-gray-400 dark:text-gray-500"></i>
+      </div>
+    </div>
+
+    <!-- Tipo de Evento -->
+    <div>
+      <label for="tipoEmpresa" class="block text-gray-700 dark:text-gray-200 font-semibold mb-2">
+        2. Quais tipos de evento você produz?
+      </label>
+      <select
+        id="tipoEmpresa"
+        name="tipoEmpresa"
+        required
+        class="w-full border border-gray-300 dark:border-gray-700 rounded-lg p-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
+      >
+        <option disabled selected value="">Selecione uma opção</option>
+        <option value="1">Festas e shows ao vivo</option>
+        <option value="2">Festas universitárias</option>
+        <option value="3">Eventos corporativos</option>
+        <option value="4">Eventos culturais e gastronômicos</option>
+        <option value="5">Festivais</option>
+        <option value="6">Peças teatrais, shows de humor ou cinema</option>
+        <option value="7">Outros tipos de eventos</option>
+      </select>
+    </div>
+
+    <!-- Quantidade de Eventos -->
+    <div>
+      <label class="block text-gray-700 dark:text-gray-200 font-semibold mb-3">
+        3. Quantos eventos você produz no ano?
+      </label>
+      <div class="flex gap-4">
+        <label class="flex items-center gap-2 text-gray-800 dark:text-gray-100">
+          <input type="radio" name="quantidadeEventos" value="1" class="accent-blue-500" checked />
+          1+
+        </label>
+        <label class="flex items-center gap-2 text-gray-800 dark:text-gray-100">
+          <input type="radio" name="quantidadeEventos" value="3" class="accent-blue-500" />
+          3+
+        </label>
+        <label class="flex items-center gap-2 text-gray-800 dark:text-gray-100">
+          <input type="radio" name="quantidadeEventos" value="5" class="accent-blue-500" />
+          5+
+        </label>
+      </div>
+    </div>
+
+    <!-- Contato -->
+    <div>
+      <p class="text-gray-800 dark:text-gray-100 font-semibold text-lg mb-4">4. Informações para contato</p>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="relative">
+          <input
+            type="email"
+            name="emailEmpresa"
+            placeholder="Email"
+            required
+            class="w-full border border-gray-300 dark:border-gray-700 rounded-lg p-3 pl-10 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+          <i data-lucide="mail" class="absolute left-3 top-3.5 w-5 h-5 text-gray-400 dark:text-gray-500"></i>
+        </div>
+        <div class="relative">
+          <input
+            type="tel"
+            name="telefoneEmpresa"
+            placeholder="Telefone"
+            required
+            class="w-full border border-gray-300 dark:border-gray-700 rounded-lg p-3 pl-10 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+          <i data-lucide="phone" class="absolute left-3 top-3.5 w-5 h-5 text-gray-400 dark:text-gray-500"></i>
+        </div>
+      </div>
+      <div class="relative mt-4">
+        <input
+          type="text"
+          name="siteEmpresa"
+          placeholder="Site ou rede social"
+          class="w-full border border-gray-300 dark:border-gray-700 rounded-lg p-3 pl-10 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+        <i data-lucide="globe" class="absolute left-3 top-3.5 w-5 h-5 text-gray-400 dark:text-gray-500"></i>
+      </div>
+    </div>
+
+    <!-- Contato por WhatsApp -->
+    <div>
+      <label class="block text-gray-700 dark:text-gray-200 font-semibold mb-2">
+        Podemos entrar em contato via WhatsApp?
+      </label>
+      <div class="flex gap-6 text-gray-800 dark:text-gray-100">
+        <label class="flex items-center gap-2">
+          <input type="radio" name="entrarContato" value="0" class="accent-blue-500" checked />
+          Não
+        </label>
+        <label class="flex items-center gap-2">
+          <input type="radio" name="entrarContato" value="1" class="accent-blue-500" />
+          Sim
+        </label>
+      </div>
+    </div>
+
+    <!-- Observações -->
+    <div>
+      <label for="observacoes" class="block text-gray-700 dark:text-gray-200 font-semibold mb-2">
+        5. Conte mais um pouco sobre você ou envie-nos uma mensagem
+      </label>
+      <textarea
+        name="observacoes"
+        id="observacoes"
+        rows="6"
+        placeholder="Ex: Organizamos eventos com mais de 500 pessoas..."
+        class="w-full border border-gray-300 dark:border-gray-700 rounded-lg p-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
+      ></textarea>
+    </div>
+
+    <!-- Botão de Envio -->
+    <div class="text-right">
+      <button
+        type="submit"
+        class="bg-blue-600 hover:bg-blue-700 transition-colors text-white rounded-full px-6 py-3 font-medium shadow-lg"
+      >
+        Enviar formulário
+      </button>
+    </div>
+  </form>
+</div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+<script src="cadastroEmpresa.js"></script>
+<script src="validarEmpresaUsuario.js"></script>

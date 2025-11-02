@@ -1,0 +1,29 @@
+<section>
+        <div class="flex justify-center items-center h-screen">
+            <div class="bg-white p-8 rounded-lg shadow-md w-96">
+                <h2 class="text-2xl font-semibold mb-4">Login</h2>
+                <form action="login" method="post" id="loginForm">
+                    <div class="mb-4">
+                        <label for="emailLogin"class="block text-sm font-medium text-gray-700">Email/CPF</label>
+                        <input type="text" id="emailLogin" name="emailCPFLogin" class="mt-1 px-3 py-2 block w-full border rounded-lg focus:ring-blue-500 focus:border-blue-500" required autocomplete="current-password">                        
+                    </div>
+                    <div class="">
+                        <label for="password" class="block text-sm font-medium text-gray-700">Senha</label>
+                        <input type="password" id="password" name="password" class="mt-1 px-3 py-2 block w-full border rounded-lg focus:ring-blue-500 focus:border-blue-500" required autocomplete="current-password">
+                    </div>
+                    {{#if senhaIncorreta}}     
+                    <span id="spanLogin" class="text-2xs text-red-600 underline ml-2">Usuário não encontrado ou senha incorreta por favor verificar as credenciais</span>
+                    {{/if}}
+                    <button id="loginBtn" type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 mt-4">Entrar</button>
+                </form>
+                <div class="mt-4 flex justify-between">
+                    <div class="text-blue-500 hover:underline cursor-pointer" id="registerBtn">
+                        <a href="/registrar">Registrar</a>                        
+                    </div>                    
+                    <div>
+                    <a href="./recuperarsenha.html" class="text-gray-500 hover:underline">Esqueceu a senha?</a>
+                    </div>
+                </div>
+                <div class=" mt-4 flex justify-center text-blue-500 hover:underline cursor-pointer">Trabalhe conosco</div>
+        </div>
+</section>
